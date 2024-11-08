@@ -1,0 +1,9 @@
+<div class="group rounded-1g border">
+    <a href="#" class="w-full overflow-hidden rounded-t-1g bg-gray-200">
+      <img [src]="product.image" [alt]="product.title" class="h-full w-full object-cover object-center group-hover:opacity-75">
+    </a>
+    <div class="flex flex-col space-y-2 p-4">
+      <h3 class="text-sm text-gray-700">{{ product.title }}</h3>
+      <p class="text-lg font-medium text-gray-900">${{ product.price }}</p>
+    </div>
+  </div>
