@@ -15,8 +15,10 @@ export class HeaderComponent {
   totalPrice = signal(0);
 
   ngOnChanges(changes: SimpleChanges){
-    this.getTotalPrice();
-
+    const duration = changes['cartProducts'];
+    if(duration && duration.currentValue.length !== duration.previousValue.length){
+      this.getTotalPrice();
+    }
   }
 
   toggleSideCart(){
